@@ -8,14 +8,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mysql.jdbc.Statement;
+//import com.mysql.jdbc.Statement;
 
 public class AfiliadoDAO {
 	
 	public void cadastrarAfiliado(Afiliado afiliado) {
 
 		/*
-		 * Isso é uma sql comum, os ? são os parâmetros que nós vamos adicionar na base
+		 * Isso ï¿½ uma sql comum, os ? sï¿½o os parï¿½metros que nï¿½s vamos adicionar na base
 		 * de dados
 		 */
 
@@ -26,14 +26,14 @@ public class AfiliadoDAO {
 		PreparedStatement pstm = null;
 
 		try {
-			// Cria uma conexão com o banco
+			// Cria uma conexï¿½o com o banco
 			conn = ConexaoMySQL.getConexaoMySQL();
 
 			// Cria um PreparedStatment, classe usada para executar a query
 			pstm =  conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			
 
-			// Adiciona o valor do primeiro parâmetro da sql
+			// Adiciona o valor do primeiro parï¿½metro da sql
 			pstm.setString(1, afiliado.getNome());
 			pstm.setString(2, afiliado.getEmail());
 			pstm.setString(3, afiliado.getSenha());
@@ -44,7 +44,7 @@ public class AfiliadoDAO {
 			
 			
 
-			// Executa a sql para inserção dos dados
+			// Executa a sql para inserï¿½ï¿½o dos dados
 			pstm.executeUpdate();
 			
 			ResultSet rs = pstm.getGeneratedKeys();
@@ -58,7 +58,7 @@ public class AfiliadoDAO {
 			e.printStackTrace();
 		} finally {
 
-			// Fecha as conexões
+			// Fecha as conexï¿½es
 
 			try {
 				if (pstm != null) {
@@ -80,7 +80,7 @@ public class AfiliadoDAO {
 	public void UpdateAfiliado(Afiliado afiliado) {
 
 		/*
-		 * Isso é uma sql comum, os ? são os parâmetros que nós vamos adicionar na base
+		 * Isso ï¿½ uma sql comum, os ? sï¿½o os parï¿½metros que nï¿½s vamos adicionar na base
 		 * de dados
 		 */
 
@@ -91,14 +91,14 @@ public class AfiliadoDAO {
 		PreparedStatement pstm = null;
 
 		try {
-			// Cria uma conexão com o banco
+			// Cria uma conexï¿½o com o banco
 			conn = ConexaoMySQL.getConexaoMySQL();
 
 			// Cria um PreparedStatment, classe usada para executar a query
 			pstm =  conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			
 
-			// Adiciona o valor do primeiro parâmetro da sql
+			// Adiciona o valor do primeiro parï¿½metro da sql
 			pstm.setString(1, afiliado.getNome());
 			pstm.setString(2, afiliado.getEmail());
 			pstm.setString(3, afiliado.getTelefone());
@@ -108,7 +108,7 @@ public class AfiliadoDAO {
 			
 			
 
-			// Executa a sql para inserção dos dados
+			// Executa a sql para inserï¿½ï¿½o dos dados
 			pstm.executeUpdate();
 			
 
@@ -118,7 +118,7 @@ public class AfiliadoDAO {
 			e.printStackTrace();
 		} finally {
 
-			// Fecha as conexões
+			// Fecha as conexï¿½es
 
 			try {
 				if (pstm != null) {
@@ -158,7 +158,7 @@ public class AfiliadoDAO {
 			pstm.setString(2, senha);
 			rset = pstm.executeQuery();
 
-			// Enquanto existir dados no banco de dados, faça
+			// Enquanto existir dados no banco de dados, faï¿½a
 			while (rset.next()) {
 
 				afiliado.setIdCooperativa(rset.getInt("Id_cooperativa"));
@@ -234,7 +234,7 @@ public class AfiliadoDAO {
 				afiliado.setDescricao(rset.getString("Descricao"));
 				
 				
-				afiliado.getEndereco().setIdEndereco(rset.getInt("Id_endereço"));
+				afiliado.getEndereco().setIdEndereco(rset.getInt("Id_endereï¿½o"));
 				afiliado.getEndereco().setIdCooperativa(rset.getInt("Id_cooperativa"));
 				afiliado.getEndereco().setCep(rset.getString("CEP"));
 				afiliado.getEndereco().setEstado(rset.getString("Estado"));
@@ -278,16 +278,16 @@ public class AfiliadoDAO {
 	public Afiliado pegarAfiliado(int id) {
 
 		String sql = "SELECT cooperativa.Id_cooperativa, Nome, Email, Senha, Telefone, tipoAfiliado, CnpjCpf, Descricao,  ";
-		sql += "Id_endereço, CEP, Estado, Bairro, Cidade, Numero, Logradouro ";
+		sql += "Id_endereï¿½o, CEP, Estado, Bairro, Cidade, Numero, Logradouro ";
 		sql += " FROM cooperativa INNER join endereco ON cooperativa.Id_cooperativa = endereco.Id_cooperativa ";
 		sql += "WHERE cooperativa.Id_cooperativa = ? ";
 
 		Afiliado afiliado = new Afiliado();
 
-		/*String sql = "SELECT cooperativa.Id_usuário, Nome, CPF, Email, Senha, Telefone, Celular, ";
-		sql += "Id_endereço, CEP, Estado, Bairro, Cidade, Numero, Logradouro ";
-		sql += "FROM cooperativa INNER join endereco ON cooperativa.Id_usuário = endereco.Id_usuário ";
-		sql += "WHERE cooperativa.id_usuário = ? ";
+		/*String sql = "SELECT cooperativa.Id_usuï¿½rio, Nome, CPF, Email, Senha, Telefone, Celular, ";
+		sql += "Id_endereï¿½o, CEP, Estado, Bairro, Cidade, Numero, Logradouro ";
+		sql += "FROM cooperativa INNER join endereco ON cooperativa.Id_usuï¿½rio = endereco.Id_usuï¿½rio ";
+		sql += "WHERE cooperativa.id_usuï¿½rio = ? ";
 		cooperativa cooperativa = new cooperativa();*/
 
 		Connection conn = null;
@@ -303,11 +303,11 @@ public class AfiliadoDAO {
 			pstm.setInt(1, id);
 			rset = pstm.executeQuery();
 
-			// Enquanto existir dados no banco de dados, faça
+			// Enquanto existir dados no banco de dados, faï¿½a
 			while (rset.next()) {
 
 
-			//SELECT Id_usuário, Nome, CPF, Email, Senha, Telefone, Celular FROM cooperativa WHERE 1
+			//SELECT Id_usuï¿½rio, Nome, CPF, Email, Senha, Telefone, Celular FROM cooperativa WHERE 1
 				afiliado.setIdCooperativa(rset.getInt("Id_cooperativa"));
 				afiliado.setNome(rset.getString("Nome"));
 				afiliado.setEmail(rset.getString("Email"));
@@ -317,7 +317,7 @@ public class AfiliadoDAO {
 				afiliado.setCnpjCpf(rset.getString("CnpjCpf"));
 				afiliado.setDescricao(rset.getString("Descricao"));
 				
-				afiliado.getEndereco().setIdEndereco(rset.getInt("Id_endereço"));
+				afiliado.getEndereco().setIdEndereco(rset.getInt("Id_endereï¿½o"));
 				afiliado.getEndereco().setIdCooperativa(rset.getInt("Id_cooperativa"));
 				afiliado.getEndereco().setCep(rset.getString("CEP"));
 				afiliado.getEndereco().setEstado(rset.getString("Estado"));
