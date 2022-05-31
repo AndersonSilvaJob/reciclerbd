@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Basic&family=Lexend+Deca:wght@100&family=Ubuntu:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+	
+	font-family:'Ubuntu', sans-serif;
+}
+
+.menu{
+    height: 100%;
+    width:0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: mediumseagreen;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.menu a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #111;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    background-color: #111;
+    color: #fff;
+}
+
+.conteudo .menu-mobile:hover{
+	color: mediumseagreen;
+	
+}
+
+.btnFechar {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 40px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.btnFechar:hover{
+    color: #888;
+}
+
+#principal{
+    padding: 16px;
+    transition: margin-left 0.5s;
+}
+
+@media screen and(max-height: 450px){
+    .menu{padding-top: 15px;}
+    .menu a{font-size: 18px;}
+}
+
+	.incor-conteudo{
+		height:0;
+		position:relative;
+		padding-top:25px;
+		padding-bottom:56.25%
+	}
+	.incor-conteudo{
+		min-height:1000px;
+	}
+	.incor-conteudo iframe{
+		min-height:1800px;
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		
+		
+		border:none;
+	}

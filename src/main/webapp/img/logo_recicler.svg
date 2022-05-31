@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1880"
+   height="400"
+   viewBox="0 0 497.41666 105.83334"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="logo_recicler.svg"
+   inkscape:export-filename="E:\Meus projetos\eclipse-workspace\recicler\src\main\webapp\img\logo_recicler.png"
+   inkscape:export-xdpi="113.75"
+   inkscape:export-ydpi="113.75"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.63229167"
+     inkscape:cx="930.74135"
+     inkscape:cy="216.67216"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2"
+     height="800px" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="formas" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="texto">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:117.8px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.94501"
+       x="19.749304"
+       y="97.482201"
+       id="text1575"
+       transform="scale(1.0152988,0.98493172)"
+       inkscape:export-filename="E:\Meus projetos\eclipse-workspace\recicler\src\main\webapp\img\logo_recicler.png"
+       inkscape:export-xdpi="113.75"
+       inkscape:export-ydpi="113.75"><tspan
+         sodipodi:role="line"
+         id="tspan1573"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:2.94501"
+         x="19.749304"
+         y="97.482201"><tspan
+           style="fill:#005c45;fill-opacity:1;stroke:#005c45;stroke-width:2.94501;stroke-opacity:1"
+           id="tspan18281">REC</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';fill:#474747;fill-opacity:1;stroke-width:2.94501"
+           id="tspan10779">icler</tspan></tspan></text>
+  </g>
+</svg>
