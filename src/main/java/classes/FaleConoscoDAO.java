@@ -4,19 +4,19 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.mysql.jdbc.Statement;
+//import com.mysql.jdbc.Statement;
 
 public class FaleConoscoDAO {
 	
 	public void inserirFaleConoscoUsuario(FaleConosco faleconosco) {
 
-		String sql = "INSERT INTO faleconosco(assunto, mensagem,Id_usuário) VALUES (?,?,?);";
+		String sql = "INSERT INTO canaldecomunicao(assunto, mensagem,Id_usuï¿½rio) VALUES (?,?,?);";
 
 		Connection conn = null;
 		PreparedStatement pstm = null;
 
 		try {
-			// Cria uma conexão com o banco
+			// Cria uma conexï¿½o com o banco
 			conn = ConexaoMySQL.getConexaoMySQL();
 
 			pstm =  conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -25,7 +25,7 @@ public class FaleConoscoDAO {
 			pstm.setString(2, faleconosco.getMensagem());
 			pstm.setInt(3, faleconosco.getUsuario().getId());
 
-			// Executa a sql para inserção dos dados
+			// Executa a sql para inserï¿½ï¿½o dos dados
 			pstm.executeUpdate();
 			
 			ResultSet rs = pstm.getGeneratedKeys();
@@ -39,7 +39,7 @@ public class FaleConoscoDAO {
 			e.printStackTrace();
 		} finally {
 
-			// Fecha as conexões
+			// Fecha as conexï¿½es
 
 			try {
 				if (pstm != null) {
@@ -66,7 +66,7 @@ public class FaleConoscoDAO {
 		PreparedStatement pstm = null;
 
 		try {
-			// Cria uma conexão com o banco
+			// Cria uma conexï¿½o com o banco
 			conn = ConexaoMySQL.getConexaoMySQL();
 
 			pstm =  conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -75,7 +75,7 @@ public class FaleConoscoDAO {
 			pstm.setString(2, faleconosco.getMensagem());
 			pstm.setInt(3, faleconosco.getAfiliado().getIdCooperativa());
 
-			// Executa a sql para inserção dos dados
+			// Executa a sql para inserï¿½ï¿½o dos dados
 			pstm.executeUpdate();
 			
 			ResultSet rs = pstm.getGeneratedKeys();
@@ -89,7 +89,7 @@ public class FaleConoscoDAO {
 			e.printStackTrace();
 		} finally {
 
-			// Fecha as conexões
+			// Fecha as conexï¿½es
 
 			try {
 				if (pstm != null) {
